@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FML FX – Gold trading education and signals</title>
+<meta name="description" content="Learn Smart Money Concepts, get XAUUSD signals, or let FML FX manage your account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{navy:'#0a0e17',slate2:'#131a28',slate3:'#1b2436',line:'#263149',em:'#10b981'},fontFamily:{display:['"Bricolage Grotesque"','system-ui','sans-serif'],body:['"DM Sans"','system-ui','sans-serif'],lux:['"Cormorant Garamond"','Georgia','serif']}}}}
+</script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:#0a0e17;background-image:radial-gradient(900px 420px at 80% -80px,rgba(212,169,55,.14),transparent 70%),radial-gradient(700px 400px at 0 0,rgba(16,185,129,.08),transparent 70%);background-repeat:no-repeat;color:#e6ebf5;font-family:"DM Sans",system-ui,sans-serif}
+#pricing a[href*="wa.me"],#payments a[href*="wa.me"]{background:linear-gradient(135deg,#fde8a0,#d4a937 55%,#f5d36b);color:#1a1405;box-shadow:0 4px 18px rgba(212,169,55,.25)}
+#pricing a[href*="t.me"],#payments a[href*="t.me"]{border-color:rgba(212,169,55,.6);color:#f5d36b}
+#pricing a[href*="t.me"]:hover,#payments a[href*="t.me"]:hover{background:rgba(212,169,55,.1);border-color:#d4a937;color:#fde8a0}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:linear-gradient(90deg,transparent,#d4a937 50%,transparent)}
+article{background-image:linear-gradient(180deg,rgba(255,255,255,.04),transparent 45%)}
+.price,.price.text-amber-300{background:linear-gradient(135deg,#fde8a0,#d4a937 55%,#f5d36b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{box-shadow:0 0 0 1px rgba(212,169,55,.45),0 0 44px rgba(212,169,55,.12)}
+.tab[aria-selected=true]{background:#10b981;color:#04130d}
+.tf[aria-pressed=true]{background:#1b2436;color:#10b981;box-shadow:inset 0 0 0 1px #10b981}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #10b981;outline-offset:2px}
+.drawer{transform:translateX(100%);transition:transform .25s ease}
+.drawer.open{transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-in{animation:rise .7s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body class="font-body antialiased">
+
+<header class="fixed inset-x-0 top-0 z-40 border-b border-line bg-navy/90 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <a href="#top" class="font-display text-xl font-extrabold tracking-tight"><span class="text-amber-300">FML</span> <span class="text-em">FX</span></a>
+    <nav class="hidden items-center gap-7 text-sm text-slate-300 md:flex" aria-label="Main">
+      <a class="hover:text-em" href="#market">Live gold</a>
+      <a class="hover:text-em" href="#calculator">Calculator</a>
+      <a class="hover:text-em" href="#learn">Curriculum</a>
+      <a class="hover:text-em" href="#pricing">Pricing</a>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20have%20a%20question." class="rounded-lg bg-em px-4 py-2 font-bold text-navy hover:brightness-110">Chat on WhatsApp</a>
+    </nav>
+    <button id="menuBtn" class="rounded-lg border border-line p-2 md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="scrim" class="fixed inset-0 z-40 hidden bg-black/60 md:hidden"></div>
+<aside id="drawer" class="drawer fixed right-0 top-0 z-50 flex h-full w-72 flex-col gap-1 border-l border-line bg-slate2 p-5 md:hidden" aria-label="Menu">
+  <button id="closeBtn" class="mb-4 self-end rounded-lg border border-line p-2" aria-label="Close menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <a class="dl rounded-lg px-3 py-3 text-lg hover:bg-slate3" href="#market">Live gold</a>
+  <a class="dl rounded-lg px-3 py-3 text-lg hover:bg-slate3" href="#calculator">Calculator</a>
+  <a class="dl rounded-lg px-3 py-3 text-lg hover:bg-slate3" href="#learn">Curriculum</a>
+  <a class="dl rounded-lg px-3 py-3 text-lg hover:bg-slate3" href="#pricing">Pricing</a>
+  <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20have%20a%20question." class="mt-4 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy">Chat on WhatsApp</a>
+  <a href="https://t.me/Femolfsupport" class="rounded-lg border border-em px-4 py-3 text-center font-bold text-em">Message on Telegram</a>
+</aside>
+
+<main id="top">
+<!-- Hero -->
+<section class="mx-auto max-w-6xl px-4 pb-10 pt-28 md:pt-36">
+  <div class="hero-in max-w-3xl">
+    <h1 class="font-lux text-5xl font-bold leading-[1.02] tracking-tight sm:text-7xl">Trade gold with a plan, not a hunch.</h1>
+    <p class="mt-5 max-w-xl text-lg text-slate-300">FML FX teaches Smart Money Concepts, sends XAUUSD signals with entry, stop loss and targets, and manages accounts for traders who want hands-off results.</p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a href="#pricing" class="rounded-lg bg-em px-6 py-3 font-bold text-navy hover:brightness-110">See plans</a>
+      <a href="https://t.me/Femolfsupport" class="rounded-lg border border-line px-6 py-3 font-bold hover:border-em hover:text-em">Message on Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- Live chart -->
+<section id="market" class="mx-auto max-w-6xl px-4 py-10">
+  <div class="rounded-2xl border border-line bg-slate2 p-4 sm:p-6 glow">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 class="font-display text-2xl font-bold text-amber-300">XAUUSD <span class="text-sm font-normal text-slate-400">Gold / US dollar</span></h2>
+        <div class="mt-1 flex items-baseline gap-3">
+          <span id="price" class="font-display text-4xl font-extrabold tabular-nums">2,745.00</span>
+          <span id="chg" class="text-sm font-bold tabular-nums text-em">+0.00</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex gap-1 rounded-lg bg-navy p-1" role="group" aria-label="Timeframe">
+          <button class="tf rounded-md px-3 py-1.5 text-sm font-bold" data-tf="1M" aria-pressed="true">1M</button>
+          <button class="tf rounded-md px-3 py-1.5 text-sm font-bold" data-tf="5M" aria-pressed="false">5M</button>
+          <button class="tf rounded-md px-3 py-1.5 text-sm font-bold" data-tf="15M" aria-pressed="false">15M</button>
+          <button class="tf rounded-md px-3 py-1.5 text-sm font-bold" data-tf="1H" aria-pressed="false">1H</button>
+        </div>
+        <label class="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
+          <span>MA</span>
+          <input id="maToggle" type="checkbox" class="peer sr-only" checked>
+          <span class="relative h-6 w-11 rounded-full bg-line transition peer-checked:bg-em peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-em after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:transition peer-checked:after:translate-x-5"></span>
+        </label>
+      </div>
+    </div>
+    <div class="relative mt-4 h-72 w-full sm:h-96">
+      <canvas id="chart" class="absolute inset-0 h-full w-full" role="img" aria-label="Simulated XAUUSD candlestick chart"></canvas>
+    </div>
+    <p class="mt-3 text-xs text-slate-400">Simulated prices for demonstration. This is not a live broker feed.</p>
+  </div>
+</section>
+
+<!-- Calculator -->
+<section id="calculator" class="mx-auto max-w-6xl px-4 py-10">
+  <div class="grid gap-6 md:grid-cols-2">
+    <div>
+      <h2 class="font-lux text-4xl font-bold">Gold lot size calculator</h2>
+      <p class="mt-3 max-w-md text-slate-300">Enter your balance, how much of it you will risk, and your stop loss. You get the lot size that keeps the loss where you set it.</p>
+      <p class="mt-3 max-w-md text-sm text-slate-400">Assumes 1 pip = $0.10 of price movement and 1 standard lot = 100 oz, so one pip is worth $10 per lot. Check your broker's contract size before you trade.</p>
+    </div>
+    <form id="calc" class="rounded-2xl border border-line bg-slate2 p-5 sm:p-6" onsubmit="return false">
+      <div class="grid gap-4">
+        <label class="block text-sm">Account balance (USD)
+          <input id="bal" type="number" min="0" step="any" value="1000" inputmode="decimal" class="mt-1 w-full rounded-lg border border-line bg-navy px-3 py-2.5 text-lg">
+        </label>
+        <label class="block text-sm">Risk per trade (%)
+          <input id="riskPct" type="number" min="0" max="100" step="any" value="1" inputmode="decimal" class="mt-1 w-full rounded-lg border border-line bg-navy px-3 py-2.5 text-lg">
+        </label>
+        <label class="block text-sm">Stop loss (pips)
+          <input id="sl" type="number" min="0" step="any" value="50" inputmode="decimal" class="mt-1 w-full rounded-lg border border-line bg-navy px-3 py-2.5 text-lg">
+        </label>
+      </div>
+      <dl class="mt-5 grid grid-cols-3 gap-3 text-center">
+        <div class="rounded-xl bg-navy p-3"><dt class="text-xs text-slate-400">Lot size</dt><dd id="outLots" class="font-display text-2xl font-extrabold text-em">0.02</dd></div>
+        <div class="rounded-xl bg-navy p-3"><dt class="text-xs text-slate-400">Risk</dt><dd id="outRisk" class="font-display text-2xl font-extrabold">$10.00</dd></div>
+        <div class="rounded-xl bg-navy p-3"><dt class="text-xs text-slate-400">Per pip</dt><dd id="outPip" class="font-display text-2xl font-extrabold">$0.20</dd></div>
+      </dl>
+      <p id="calcNote" class="mt-3 min-h-5 text-sm text-amber-300" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section id="learn" class="mx-auto max-w-6xl px-4 py-10">
+  <h2 class="font-lux text-4xl font-bold">What you will learn</h2>
+  <div class="mt-5 flex flex-wrap gap-2" role="tablist" aria-label="Curriculum modules" id="tabs">
+    <button class="tab rounded-lg bg-slate2 px-4 py-2 text-sm font-bold" role="tab" id="t0" aria-controls="p0" aria-selected="true">Smart Money Concepts</button>
+    <button class="tab rounded-lg bg-slate2 px-4 py-2 text-sm font-bold" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1">Order Blocks</button>
+    <button class="tab rounded-lg bg-slate2 px-4 py-2 text-sm font-bold" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Liquidity Sweeps</button>
+    <button class="tab rounded-lg bg-slate2 px-4 py-2 text-sm font-bold" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Risk Management</button>
+  </div>
+  <div class="mt-4 rounded-2xl border border-line bg-slate2 p-6">
+    <div id="p0" role="tabpanel" aria-labelledby="t0">
+      <h3 class="font-display text-xl font-bold">Read the market the way institutions move it</h3>
+      <p class="mt-2 max-w-2xl text-slate-300">Market structure, breaks of structure, change of character, premium and discount zones, and how to mark a higher-timeframe bias before you look for an entry.</p>
+      <ul class="mt-4 grid gap-2 text-slate-300 sm:grid-cols-2"><li>Swing highs and lows</li><li>Break of structure vs change of character</li><li>Premium and discount ranges</li><li>Building a daily bias</li></ul>
+    </div>
+    <div id="p1" role="tabpanel" aria-labelledby="t1" hidden>
+      <h3 class="font-display text-xl font-bold">Find the candles where big orders sit</h3>
+      <p class="mt-2 max-w-2xl text-slate-300">Learn which order blocks hold and which fail, how to confirm them with imbalance, and where to place stops so a normal pullback does not take you out.</p>
+      <ul class="mt-4 grid gap-2 text-slate-300 sm:grid-cols-2"><li>Bullish and bearish order blocks</li><li>Fair value gaps and imbalance</li><li>Mitigation and refined entries</li><li>Stop placement behind the block</li></ul>
+    </div>
+    <div id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+      <h3 class="font-display text-xl font-bold">Stop being the liquidity</h3>
+      <p class="mt-2 max-w-2xl text-slate-300">Gold hunts obvious highs and lows before it moves. Spot equal highs, session highs and trendline liquidity, and wait for the sweep and reversal before you enter.</p>
+      <ul class="mt-4 grid gap-2 text-slate-300 sm:grid-cols-2"><li>Equal highs and equal lows</li><li>Asian range sweeps at London open</li><li>Trendline and inducement traps</li><li>Entry after the sweep, not before</li></ul>
+    </div>
+    <div id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+      <h3 class="font-display text-xl font-bold">Stay in the game long enough to win</h3>
+      <p class="mt-2 max-w-2xl text-slate-300">Position sizing, fixed-percentage risk, minimum reward-to-risk, and daily loss limits. Use the calculator above on every trade.</p>
+      <ul class="mt-4 grid gap-2 text-slate-300 sm:grid-cols-2"><li>Risk 1–2% per trade</li><li>Aim for at least 1:2 reward to risk</li><li>Daily and weekly loss limits</li><li>Journaling every trade</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="mx-auto max-w-6xl px-4 py-10">
+  <h2 class="font-lux text-4xl font-bold">Pick how you want to trade</h2>
+  <p class="mt-2 text-slate-300">Tap a plan and the chat opens in your app with the message already written.</p>
+  <div class="mt-6 grid gap-5 md:grid-cols-3">
+    <article class="flex flex-col rounded-2xl border border-line bg-slate2 p-6">
+      <h3 class="font-display text-xl font-bold">Monthly Signal Access</h3>
+      <p class="mt-3"><span class="font-display price text-5xl font-extrabold text-amber-300">$29</span> <span class="text-slate-400">for 30 days</span></p>
+      <ul class="mt-4 flex-1 space-y-2 text-slate-300"><li>XAUUSD signals with entry, SL and TP</li><li>Trade updates and exits</li><li>Cancel by not renewing</li></ul>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20the%20Monthly%20Signal%20Access%20plan%20(%2429%20for%2030%20days).%20How%20do%20I%20pay%3F" class="mt-6 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Get monthly on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+    <article class="relative flex flex-col rounded-2xl border border-amber-300/60 bg-slate2 p-6 glow">
+      <span class="absolute -top-3 left-6 rounded-full bg-amber-300 px-3 py-1 text-xs font-bold text-navy">Best value</span>
+      <h3 class="font-display text-xl font-bold">Yearly Signal Access</h3>
+      <p class="mt-3"><span class="font-display price text-5xl font-extrabold text-amber-300">$130</span> <span class="text-slate-400">for 12 months</span></p>
+      <ul class="mt-4 flex-1 space-y-2 text-slate-300"><li>Everything in monthly</li><li>Pay once for the whole year</li><li>Save $218 compared with paying monthly</li></ul>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20the%20Yearly%20Signal%20Access%20plan%20(%24130%20for%2012%20months).%20How%20do%20I%20pay%3F" class="mt-6 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Get yearly on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+    <article class="flex flex-col rounded-2xl border border-line bg-slate2 p-6">
+      <h3 class="font-display text-xl font-bold">Account Management</h3>
+      <p class="mt-3"><span class="font-display price text-5xl font-extrabold text-amber-300">50/50</span> <span class="text-slate-400">profit split</span></p>
+      <ul class="mt-4 flex-1 space-y-2 text-slate-300"><li>We trade your account for you</li><li>Minimum balance of $100</li><li>You pay only from profits</li></ul>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20am%20interested%20in%20Account%20Management%20(50%2F50%20profit%20split%2C%20%24100%20minimum%20balance).%20How%20do%20I%20start%3F" class="mt-6 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Start on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+  </div>
+</section>
+<!-- Payment methods -->
+<section id="payments" class="mx-auto max-w-6xl px-4 py-10">
+  <h2 class="font-lux text-4xl font-bold">How to pay</h2>
+  <p class="mt-2 max-w-xl text-slate-300">Choose a plan, then message us with the method you prefer. We reply with the payment details and activate your access once payment is confirmed.</p>
+  <div class="mt-6 grid gap-5 md:grid-cols-3">
+    <article class="flex flex-col rounded-2xl border border-line bg-slate2 p-6">
+      <div class="flex items-center gap-3">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#43b02a] font-display text-lg font-extrabold text-white" aria-hidden="true">M</span>
+        <h3 class="font-display text-xl font-bold">M-Pesa</h3>
+      </div>
+      <p class="mt-3 flex-1 text-slate-300">Pay straight from your phone in Kenyan shillings. It is the fastest way to pay if you are in Kenya.</p>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20to%20pay%20with%20M-Pesa.%20Please%20send%20the%20payment%20details." class="mt-5 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Pay with M-Pesa on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+    <article class="flex flex-col rounded-2xl border border-line bg-slate2 p-6">
+      <div class="flex items-center gap-3">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f7931a] font-display text-xl font-extrabold text-white" aria-hidden="true">&#8383;</span>
+        <h3 class="font-display text-xl font-bold">Bitcoin via Binance</h3>
+      </div>
+      <p class="mt-3 flex-1 text-slate-300">Pay in Bitcoin from your Binance account, from anywhere in the world.</p>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20to%20pay%20with%20Bitcoin%20on%20Binance.%20Please%20send%20the%20payment%20details." class="mt-5 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Pay with Binance on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+    <article class="flex flex-col rounded-2xl border border-line bg-slate2 p-6">
+      <div class="flex items-center gap-3">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#26a17b] font-display text-lg font-extrabold text-white" aria-hidden="true">&#8366;</span>
+        <h3 class="font-display text-xl font-bold">Other crypto</h3>
+      </div>
+      <p class="mt-3 flex-1 text-slate-300">Prefer USDT, Ethereum or another major coin? Tell us which coin and network you want to use and we will confirm it.</p>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20to%20pay%20with%20crypto%20(USDT%2C%20ETH%20or%20another%20coin).%20Which%20coins%20and%20networks%20do%20you%20accept%3F" class="mt-5 rounded-lg bg-em px-4 py-3 text-center font-bold text-navy hover:brightness-110">Pay with crypto on WhatsApp</a>
+      <a href="https://t.me/Femolfsupport" class="mt-2 rounded-lg border border-line px-4 py-3 text-center font-bold hover:border-em hover:text-em">Telegram</a>
+    </article>
+  </div>
+  <p class="mt-4 max-w-2xl text-sm text-slate-400">Only pay to details sent from our WhatsApp number or our Telegram account, and send us your payment confirmation after you pay.</p>
+</section>
+<!-- VVIP community -->
+<section id="vvip" class="mx-auto max-w-6xl px-4 py-10">
+  <div class="glow rounded-2xl border border-amber-300/60 bg-slate2 p-6 sm:p-10" style="background-image:radial-gradient(600px 240px at 90% 0,rgba(212,169,55,.16),transparent 70%)">
+    <div class="max-w-2xl">
+      <h2 class="font-lux text-4xl font-bold sm:text-5xl">Join the VVIP Telegram community</h2>
+      <p class="mt-3 text-lg text-slate-300">Trade alongside other FML FX members and get closer access to the team. Message us and we will send your invite.</p>
+    </div>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="https://t.me/Femolfsupport" class="rounded-lg bg-amber-300 px-6 py-3 font-bold text-navy hover:brightness-110">Join on Telegram</a>
+      <a href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20want%20to%20join%20the%20VVIP%20Telegram%20community.%20How%20do%20I%20get%20in%3F" class="rounded-lg border border-amber-300/70 px-6 py-3 font-bold text-amber-300 hover:bg-amber-300/10">Ask on WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="mt-10 border-t border-line">
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <a href="#top" class="font-display text-xl font-extrabold"><span class="text-amber-300">FML</span> <span class="text-em">FX</span></a>
+      <div class="flex gap-4 text-sm">
+        <a class="text-em hover:underline" href="https://wa.me/254117589628?text=Hi%20FML%20FX%2C%20I%20have%20a%20question.">WhatsApp +254 117 589 628</a>
+        <a class="text-em hover:underline" href="https://t.me/Femolfsupport">Telegram @Femolfsupport</a>
+      </div>
+    </div>
+    <p class="mt-6 max-w-3xl text-xs leading-relaxed text-slate-400">Risk warning: trading leveraged products such as gold carries a high risk of losing money, and you can lose more than you deposit. Past results do not guarantee future results. Signals and education are not financial advice. Only trade money you can afford to lose. Chart data on this page is simulated.</p>
+    <p class="mt-3 text-xs text-slate-500">© <span id="yr"></span> FML FX. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)}, $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* Mobile drawer */
+  var drawer=$('#drawer'), scrim=$('#scrim'), mb=$('#menuBtn');
+  function setMenu(o){drawer.classList.toggle('open',o);scrim.classList.toggle('hidden',!o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+  mb.onclick=function(){setMenu(true)};$('#closeBtn').onclick=function(){setMenu(false)};scrim.onclick=function(){setMenu(false)};
+  $$('.dl').forEach(function(a){a.onclick=function(){setMenu(false)}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+  /* Tabs */
+  var tabs=$$('.tab');
+  function pick(i){tabs.forEach(function(t,j){var on=i===j;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;$('#p'+j).hidden=!on})}
+  tabs.forEach(function(t,i){t.onclick=function(){pick(i)};t.onkeydown=function(e){
+    var n=e.key==='ArrowRight'?(i+1)%4:e.key==='ArrowLeft'?(i+3)%4:-1;if(n>=0){pick(n);tabs[n].focus()}}});
+
+  /* Calculator */
+  function calc(){
+    var b=parseFloat($('#bal').value)||0,r=parseFloat($('#riskPct').value)||0,s=parseFloat($('#sl').value)||0;
+    var risk=b*r/100,note=$('#calcNote');
+    if(b<=0||r<=0||s<=0){$('#outLots').textContent='0.00';$('#outRisk').textContent='$0.00';$('#outPip').textContent='$0.00';note.textContent='Enter a balance, risk % and stop loss above zero.';return}
+    var lots=risk/(s*10),floor=Math.floor(lots*100)/100;
+    $('#outLots').textContent=floor.toFixed(2);
+    $('#outRisk').textContent='$'+(floor*s*10).toFixed(2);
+    $('#outPip').textContent='$'+(floor*10).toFixed(2);
+    note.textContent=floor<0.01?'Your risk is below the 0.01 minimum lot. Raise the risk or tighten the stop loss.':(r>3?'Risking more than 3% per trade can wipe out an account quickly.':'');
+  }
+  ['#bal','#riskPct','#sl'].forEach(function(s){$(s).addEventListener('input',calc)});calc();
+
+  /* Chart engine */
+  var cv=$('#chart'),ctx=cv.getContext('2d'),W=0,H=0,dpr=1;
+  var LO=2730,HI=2760,MID=2745,MAXC=70;
+  var TF={'1M':{vol:.9,sec:4},'5M':{vol:1.6,sec:6},'15M':{vol:2.4,sec:8},'1H':{vol:3.8,sec:10}};
+  var tf='1M',candles=[],showMA=true,price=MID,open0=MID,lastNew=performance.now();
+  function clamp(p){
+    if(p>HI-.5)p=HI-.5-Math.random()*1.5; if(p<LO+.5)p=LO+.5+Math.random()*1.5; return p}
+  function step(p,v){ // mean-reverting random walk
+    var d=(Math.random()-.5)*v*1.3+(MID-p)*.02; return clamp(p+d)}
+  function seed(){
+    candles=[];var p=MID+(Math.random()-.5)*10,v=TF[tf].vol;
+    for(var i=0;i<MAXC;i++){
+      var o=p,c=o,h=o,l=o;
+      for(var k=0;k<12;k++){c=step(c,v);h=Math.max(h,c);l=Math.min(l,c)}
+      h=Math.min(HI,h+Math.random()*v*.5);l=Math.max(LO,l-Math.random()*v*.5);
+      candles.push({o:o,h:h,l:l,c:c});p=c}
+    price=p;open0=candles[0].o;lastNew=performance.now();
+  }
+  function resize(){
+    var r=cv.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);
+    W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function tick(){
+    var cur=candles[candles.length-1],v=TF[tf].vol/6;
+    price=step(price,v);cur.c=price;cur.h=Math.max(cur.h,price);cur.l=Math.min(cur.l,price);
+    if(performance.now()-lastNew>TF[tf].sec*1000){
+      candles.push({o:price,h:price,l:price,c:price});if(candles.length>MAXC)candles.shift();lastNew=performance.now()}
+  }
+  function ma(n){var out=[];for(var i=0;i<candles.length;i++){if(i<n-1){out.push(null);continue}var s=0;for(var j=0;j<n;j++)s+=candles[i-j].c;out.push(s/n)}return out}
+  var UP='#10b981',DN='#ef4444';
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var padR=58,padT=10,padB=10,cw=W-padR,ch=H-padT-padB;
+    var mn=Infinity,mx=-Infinity;candles.forEach(function(c){mn=Math.min(mn,c.l);mx=Math.max(mx,c.h)});
+    var span=Math.max(mx-mn,6),mid=(mx+mn)/2;mn=mid-span*.6;mx=mid+span*.6;
+    var Y=function(p){return padT+(mx-p)/(mx-mn)*ch};
+    ctx.font='11px "DM Sans",system-ui,sans-serif';ctx.textBaseline='middle';
+    for(var g=0;g<=5;g++){
+      var gp=mn+(mx-mn)*g/5,gy=Y(gp);
+      ctx.strokeStyle='#1b2436';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,gy);ctx.lineTo(cw,gy);ctx.stroke();
+      ctx.fillStyle='#8593ad';ctx.fillText(gp.toFixed(1),cw+8,gy)}
+    var slot=cw/MAXC,bw=Math.max(2,slot*.62),off=(MAXC-candles.length)*slot;
+    candles.forEach(function(c,i){
+      var x=off+i*slot+slot/2,up=c.c>=c.o,col=up?UP:DN;
+      ctx.strokeStyle=col;ctx.fillStyle=col;ctx.lineWidth=1.2;
+      ctx.beginPath();ctx.moveTo(x,Y(c.h));ctx.lineTo(x,Y(c.l));ctx.stroke();
+      var t=Y(Math.max(c.o,c.c)),b=Y(Math.min(c.o,c.c));ctx.fillRect(x-bw/2,t,bw,Math.max(1.5,b-t))});
+    if(showMA){
+      [[10,'#fbbf24'],[30,'#60a5fa']].forEach(function(m){
+        var a=ma(m[0]);ctx.strokeStyle=m[1];ctx.lineWidth=1.6;ctx.beginPath();var st=false;
+        a.forEach(function(v,i){if(v==null)return;var x=off+i*slot+slot/2,y=Y(v);st?ctx.lineTo(x,y):(ctx.moveTo(x,y),st=true)});ctx.stroke()})}
+    var py=Y(price),last=candles[candles.length-1],col=last.c>=last.o?UP:DN;
+    ctx.setLineDash([4,4]);ctx.strokeStyle=col;ctx.beginPath();ctx.moveTo(0,py);ctx.lineTo(cw,py);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=col;ctx.fillRect(cw+2,py-10,padR-2,20);ctx.fillStyle='#04130d';ctx.font='bold 11px "DM Sans",system-ui,sans-serif';ctx.fillText(price.toFixed(2),cw+7,py);
+    var pe=$('#price');pe.textContent=price.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    var d=price-open0,ce=$('#chg');ce.textContent=(d>=0?'+':'')+d.toFixed(2);ce.style.color=d>=0?UP:DN;
+  }
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,acc=0,prev=performance.now(),visible=true;
+  function loop(now){
+    acc+=now-prev;prev=now;
+    if(visible&&acc>(reduce?1200:140)){acc=0;tick()}
+    if(visible)draw();requestAnimationFrame(loop)}
+  $$('.tf').forEach(function(b){b.onclick=function(){tf=b.dataset.tf;$$('.tf').forEach(function(x){x.setAttribute('aria-pressed',x===b)});seed()}});
+  $('#maToggle').onchange=function(e){showMA=e.target.checked};
+  new IntersectionObserver(function(e){visible=e[0].isIntersecting}).observe(cv);
+  window.addEventListener('resize',resize);if(window.ResizeObserver)new ResizeObserver(resize).observe(cv);
+  resize();seed();requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
